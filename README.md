@@ -8,12 +8,11 @@ build and install the docker gcc avr toolchain
 ```bash
 docker build -t avr-gcc .
 ```
-to build skeleton, the first is to start up the docker and map the skeleton.c to docker
+to build skeleton, the first is to start up the docker and map the skeleton.c to docker (:Z in volume for selinux environment - fedora)
 
 ```bash
-docker run -v $(pwd):/opt/avr -it avr-gcc bash
+docker run -v $(pwd):/opt/avr:Z -it avr-gcc bash
 ```
-
 then build the source with avr-gcc use make
 
 ```bash
