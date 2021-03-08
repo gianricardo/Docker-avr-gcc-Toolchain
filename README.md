@@ -6,12 +6,12 @@ A docker image for avr gcc build
 build and install the docker gcc avr toolchain
 
 ```bash
-docker build -t="avr-gcc" .
+docker build -t avr-gcc .
 ```
 to build skeleton, the first is to start up the docker and map the skeleton.c to docker
 
 ```bash
-docker run  -v $(pwd):/opt/avr -it avr-gcc bash
+docker run -v $(pwd):/opt/avr -it avr-gcc bash
 ```
 
 then build the source with avr-gcc use make
@@ -21,4 +21,4 @@ make hex
 ```
 
 ## License
-[MIT](https://github.com/Lembed/Docker-avr-gcc-Development/blob/master/LICENSE)
+[MIT](https://github.com/gianricardo/Docker-avr-gcc-Toolchain/blob/master/LICENSE)
